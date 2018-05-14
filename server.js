@@ -31,9 +31,11 @@ app.use((request, response, next) => {
   next();
 });
 
+/*
 app.use((request, response, next) => {
   response.render("maintenance.hbs");
 });
+*/
 
 // Helpers are functions that can be referenced in your Handlebars code
 // so that you dont need to call and pass them in multiple times.
@@ -58,6 +60,12 @@ app.get('/', (request, response) => {
 app.get('/about', (request, response) => {
   response.render("about.hbs", {
     pageTitle: "About Page",
+  });
+});
+
+app.get('/portfolio', (request, response) => {
+  response.render("portfolio.hbs", {
+    pageTitle: "Portfolio"
   });
 });
 
